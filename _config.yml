@@ -1,10 +1,10 @@
 # Site Settings
-title: Tamenal Memo
+title: Tameninal
 email: 
-description: ためになる知見のメモ
+description: 為になる知見を簡潔に共有します
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
-google_analytics: "UA-XXXXXXXX-X"
+google_analytics: "UA-122651955-1"
 
 # User Settings
 username: gacktomo
