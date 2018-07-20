@@ -3,7 +3,7 @@ title: Tamenal Memo
 email: 
 description: ためになる知見のメモ
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.rossener.com" # the base hostname & protocol for your site
+url: "" # the base hostname & protocol for your site
 google_analytics: "UA-XXXXXXXX-X"
 
 # User Settings
@@ -12,13 +12,9 @@ user_description: Web Engineer.
 disqus_username: gacktomo
 
 # Social Media
-# Remove the item if you don't need it
 github_username: gacktomo
-#facebook_username: facebook_username
 twitter_username: gakutomo
 instagram_username: basho_m
-#linkedin_username: linkedin_username
-#medium_username: medium_username
 
 # Build settings
 markdown: kramdown
