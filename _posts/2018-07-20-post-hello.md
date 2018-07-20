@@ -2,9 +2,9 @@
 layout: post
 title: 記憶に残る本の読み方
 permalink: how-to-read-book
-description: ３つポイントに気をつければ本の内容が記憶に残る
-twitter_text: ３つポイントに気をつければ本の内容が記憶に残る
-introduction: ３つポイントに気をつければ本の内容が記憶に残る
+description: ３つのポイントに気をつければ本の内容を忘れなくなる
+twitter_text: ３つのポイントに気をつければ本の内容を忘れなくなる
+introduction: ３つのポイントに気をつければ本の内容を忘れなくなる
 image: /images/uploads/s512_f_business_42_0bg.png
 categories:
   - life
