@@ -15,7 +15,7 @@
         {% if page.image.match(/^http/) %}
             <meta property="twitter:image:src" content="{{ page.image }}">
         {% else %}
-            <meta property="twitter:image:src" content="{{ page.image | prepend: site.baseurl }}">
+            <meta property="twitter:image:src" content="{{ page.image | prepend: site.url }}">
         {% endif %}
     {% else %}
     <meta property="twitter:image:src" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
@@ -25,7 +25,11 @@
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}(タメニナル){% else %}{{ site.title }}(タメニナル){% endif %}">
     {% if page.image %}
-    <meta property="og:image" content="{{ page.image }}">
+        {% if page.image.match(/^http/) %}
+            <meta property="og:image" content="{{ page.image }}">
+        {% else %}
+            <meta property="og:image" content="{{ page.image | prepend: site.url }}">
+        {% endif %}
     {% else %}
     <meta property="og:image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
