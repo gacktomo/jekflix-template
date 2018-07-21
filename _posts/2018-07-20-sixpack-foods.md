@@ -6,6 +6,8 @@ description: シックスパックになるには食のリズムが重要だっ�
 twitter_text: シックスパックになるには食のリズムが重要だった
 introduction: シックスパックになるには食のリズムが重要だった
 image: /images/uploads/f_f_health_20_s512_f_health_20_0bg.png
+categories:
+  - life
 tags:
   - food
   - health
@@ -14,7 +16,6 @@ tags:
 
 > 脂肪を減らしやすい食事の方法  
 
----
 <br/>
 
 ## 重要なのは食べない時間だった
