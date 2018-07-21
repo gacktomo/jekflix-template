@@ -9,17 +9,21 @@
     <!-- Social: Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@{{site.twitter_username}}">
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.username }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}(タメニナル){% else %}{{ site.title }}(タメニナル){% endif %}">
     <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     {% if page.image %}
-    <meta property="twitter:image:src" content="{{ page.image }}">
+        {% if page.image.match(/^http/) %}
+            <meta property="twitter:image:src" content="{{ page.image }}">
+        {% else %}
+            <meta property="twitter:image:src" content="{{ page.image | prepend: site.baseurl }}">
+        {% endif %}
     {% else %}
     <meta property="twitter:image:src" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
 
     <!-- Social: Facebook / Open Graph -->
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.username }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}(タメニナル){% else %}{{ site.title }}(タメニナル){% endif %}">
     {% if page.image %}
     <meta property="og:image" content="{{ page.image }}">
     {% else %}
@@ -29,7 +33,7 @@
     <meta property="og:site_name" content="{{ site.title }}">
 
     <!-- Social: Google+ / Schema.org  -->
-    <meta itemprop="name" content="{% if page.title %}{{ page.title }} | {{ site.username }}{% else %}{{ site.title }}{% endif %}"/>
+    <meta itemprop="name" content="{% if page.title %}{{ page.title }} | {{ site.title }}(タメニナル){% else %}{{ site.title }}(タメニナル){% endif %}"/>
     <meta itemprop="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta itemprop="image" content="{{ "/assets/img/blog-image.png" | prepend: site.baseurl | prepend: site.url }}"/>
 
@@ -48,7 +52,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/icons/apple-touch-icon-152x152.png" />
 
     <!-- Windows 8 Tile Icons -->
-    <meta name="application-name" content="{{ site.username }} Blog">
+    <meta name="application-name" content="{{ site.title }}">
     <meta name="msapplication-TileColor" content="#0562DC">
     <meta name="msapplication-square70x70logo" content="smalltile.png" />
     <meta name="msapplication-square150x150logo" content="mediumtile.png" />
